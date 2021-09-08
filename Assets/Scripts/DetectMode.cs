@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class DetectMode : MonoBehaviour
 {
-    public PhoneARCamera phoneARCamera;
+    public GameObject cameraImage;
+    private PhoneARCamera phoneARCamera;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        phoneARCamera = cameraImage.GetComponent<PhoneARCamera>();
     }
 
     // Update is called once per frame
