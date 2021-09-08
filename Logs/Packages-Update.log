@@ -1,0 +1,12 @@
+
+=== Tue Sep  7 12:54:36 2021
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.ide.visualstudio from version 2.0.5 to 2.0.8
+  com.unity.textmeshpro from version 3.0.3 to 3.0.6
+  com.unity.xr.arcore from version 4.0.9 to 4.1.7
+  com.unity.xr.arfoundation from version 4.0.9 to 4.1.7
+  com.unity.xr.arkit from version 4.0.9 to 4.1.7
