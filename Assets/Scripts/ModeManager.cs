@@ -33,9 +33,8 @@ public class ModeManager : MonoBehaviour
                 if (phoneARCamera.boxSavedOutlines.Count > 0)
                 {
                     item = phoneARCamera.boxSavedOutlines[0].Label;
-                    //category = categories[item];
-                    //detectText.text = "You found a " + item + "!\n Your " + category + " increases!";
-                    detectText.text = "You found a " + item;
+                    category = categories[item];
+                    detectText.text = "You found a " + item + "!\nYour " + category + " increases!";
                     phoneARCamera.enabled = false;
                     mode = "idle";
                 }
