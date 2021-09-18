@@ -53,9 +53,9 @@ public class Challenges : MonoBehaviour
             skinColour = "default";
         }
 
-        animal = true;
-        vehicle = true;
-        food = true;
+        animal = false;
+        vehicle = false;
+        food = false;
         CheckChallenges();
 
         animalList.SetActive(false);
@@ -169,15 +169,27 @@ public class Challenges : MonoBehaviour
         {
             animal = true;
         }
+        else
+        {
+            animal = false;
+        }
 
         if (car == 1 && bus == 1 & bicycle == 1)
         {
             vehicle = true;
         }
+        else
+        {
+            vehicle = false;
+        }
 
         if (apple == 1 && sandwich == 1 && pizza == 1)
         {
             food = true;
+        }
+        else
+        {
+            food = false;
         }
     }
 
