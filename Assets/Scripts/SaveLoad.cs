@@ -21,6 +21,7 @@ public class SaveLoad : MonoBehaviour
     private int savedApple;
     private int savedSandwich;
     private int savedPizza;
+    private string savedSkin;
 
 
     // Start is called before the first frame update
@@ -50,6 +51,7 @@ public class SaveLoad : MonoBehaviour
         savedApple = challenges.apple;
         savedSandwich = challenges.sandwich;
         savedPizza = challenges.pizza;
+        savedSkin = challenges.skinColour;
 
         DateTime currentDate = DateTime.Now;
         long dateBinary = currentDate.ToBinary();
@@ -69,6 +71,8 @@ public class SaveLoad : MonoBehaviour
         PlayerPrefs.SetInt("apple", savedApple);
         PlayerPrefs.SetInt("sandwich", savedSandwich);
         PlayerPrefs.SetInt("pizza", savedPizza);
+
+        PlayerPrefs.SetString("skin", savedSkin);
 
         Application.Quit();
     }

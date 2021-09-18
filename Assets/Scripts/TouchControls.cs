@@ -23,7 +23,7 @@ public class TouchControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.touchCount > 0 && !EventSystem.current.IsPointerOverGameObject())
+        if (Input.touchCount > 0 && !EventSystem.current.IsPointerOverGameObject(0))
         {
             touch = Input.GetTouch(0);
             touchPosition = touch.position;

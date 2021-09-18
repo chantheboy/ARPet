@@ -20,6 +20,7 @@ public class Challenges : MonoBehaviour
     public GameObject animalList;
     public GameObject vehicleList;
     public GameObject foodList;
+    public string skinColour;
 
 
     // Start is called before the first frame update
@@ -36,6 +37,7 @@ public class Challenges : MonoBehaviour
             apple = PlayerPrefs.GetInt("apple");
             sandwich = PlayerPrefs.GetInt("sandwich");
             pizza = PlayerPrefs.GetInt("pizza");
+            skinColour = PlayerPrefs.GetString("skin");
         }
         else
         {
@@ -48,11 +50,12 @@ public class Challenges : MonoBehaviour
             apple = 0;
             sandwich = 0;
             pizza = 0;
+            skinColour = "default";
         }
 
-        animal = false;
-        vehicle = false;
-        food = false;
+        animal = true;
+        vehicle = true;
+        food = true;
         CheckChallenges();
 
         animalList.SetActive(false);
@@ -160,7 +163,6 @@ public class Challenges : MonoBehaviour
         CheckChallenges();
     }
 
-
     public void CheckChallenges()
     {
         if (cat == 1 && dog == 1 & horse == 1)
@@ -176,6 +178,35 @@ public class Challenges : MonoBehaviour
         if (apple == 1 && sandwich == 1 && pizza == 1)
         {
             food = true;
+        }
+    }
+
+    public void ChangeColour(string challenge)
+    {
+        if (challenge == "default")
+        {
+            skinColour = "default";
+        }
+        else if (challenge == "animal")
+        {
+            if (animal)
+            {
+                skinColour = "green";
+            }
+        }
+        else if (challenge == "vehicle")
+        {
+            if (vehicle)
+            {
+                skinColour = "blue";
+            }
+        }
+        else if (challenge == "food")
+        {
+            if (food)
+            {
+                skinColour = "pink";
+            }
         }
     }
 }

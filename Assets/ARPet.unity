@@ -183,7 +183,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &36209706
 MonoBehaviour:
@@ -405,7 +405,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: BLACK & WHITE
+  m_Text: PINK SKIN
 --- !u!222 &43435390
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -829,6 +829,7 @@ GameObject:
   - component: {fileID: 180998295}
   - component: {fileID: 180998297}
   - component: {fileID: 180998296}
+  - component: {fileID: 180998298}
   m_Layer: 5
   m_Name: Check
   m_TagString: Untagged
@@ -893,6 +894,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180998294}
   m_CullTransparentMesh: 1
+--- !u!114 &180998298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180998294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72b34fd89bc55f645bb9815dbf62e92c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 2099000730}
+  tick: {fileID: 21300000, guid: 4aba179bb2623df4c9fffa411421dadc, type: 3}
+  empty: {fileID: 21300000, guid: 2d7d34242bb238342b5090606321941d, type: 3}
+  item: food
 --- !u!1 &205469108
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,7 +1002,7 @@ GameObject:
   - component: {fileID: 233442652}
   - component: {fileID: 233442651}
   m_Layer: 5
-  m_Name: PinkButton
+  m_Name: BlueButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1009,7 +1026,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50, y: 0}
+  m_AnchoredPosition: {x: -50, y: -50}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &233442651
@@ -1055,7 +1072,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 233442652}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2099000737}
+        m_TargetAssemblyTypeName: Challenges, Assembly-CSharp
+        m_MethodName: ChangeColour
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: vehicle
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &233442652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1540,7 +1569,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50, y: 100}
+  m_AnchoredPosition: {x: -50, y: 50}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &378273866
@@ -1586,7 +1615,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 378273867}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2099000737}
+        m_TargetAssemblyTypeName: Challenges, Assembly-CSharp
+        m_MethodName: ChangeColour
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: animal
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &378273867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1766,7 +1807,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50, y: 200}
+  m_AnchoredPosition: {x: -50, y: 150}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &420097448
@@ -1812,7 +1853,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 420097449}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2099000737}
+        m_TargetAssemblyTypeName: Challenges, Assembly-CSharp
+        m_MethodName: ChangeColour
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: default
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &420097449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2563,7 +2616,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2d7d34242bb238342b5090606321941d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4aba179bb2623df4c9fffa411421dadc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2827,6 +2880,7 @@ GameObject:
   - component: {fileID: 763602303}
   - component: {fileID: 763602305}
   - component: {fileID: 763602304}
+  - component: {fileID: 763602306}
   m_Layer: 5
   m_Name: Check
   m_TagString: Untagged
@@ -2891,6 +2945,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 763602302}
   m_CullTransparentMesh: 1
+--- !u!114 &763602306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763602302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72b34fd89bc55f645bb9815dbf62e92c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 2099000730}
+  tick: {fileID: 21300000, guid: 4aba179bb2623df4c9fffa411421dadc, type: 3}
+  empty: {fileID: 21300000, guid: 2d7d34242bb238342b5090606321941d, type: 3}
+  item: animal
 --- !u!1 &779689016
 GameObject:
   m_ObjectHideFlags: 0
@@ -4403,99 +4473,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 150}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1001 &1274020240
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8151608749036815813, guid: 2c1d34a0b201e4f8ea095f4a30d79d6f,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8151608749036815813, guid: 2c1d34a0b201e4f8ea095f4a30d79d6f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 8151608749036815813, guid: 2c1d34a0b201e4f8ea095f4a30d79d6f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 8151608749036815813, guid: 2c1d34a0b201e4f8ea095f4a30d79d6f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 8151608749036815813, guid: 2c1d34a0b201e4f8ea095f4a30d79d6f,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8151608749036815813, guid: 2c1d34a0b201e4f8ea095f4a30d79d6f,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8151608749036815813, guid: 2c1d34a0b201e4f8ea095f4a30d79d6f,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8151608749036815813, guid: 2c1d34a0b201e4f8ea095f4a30d79d6f,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8151608749036815813, guid: 2c1d34a0b201e4f8ea095f4a30d79d6f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8151608749036815813, guid: 2c1d34a0b201e4f8ea095f4a30d79d6f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8151608749036815813, guid: 2c1d34a0b201e4f8ea095f4a30d79d6f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8151608749036815814, guid: 2c1d34a0b201e4f8ea095f4a30d79d6f,
-        type: 3}
-      propertyPath: m_Name
-      value: Text Anchor
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2c1d34a0b201e4f8ea095f4a30d79d6f, type: 3}
---- !u!1 &1274020241 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8151608749036815814, guid: 2c1d34a0b201e4f8ea095f4a30d79d6f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1274020240}
-  m_PrefabAsset: {fileID: 0}
---- !u!102 &1274020242 stripped
-TextMesh:
-  m_CorrespondingSourceObject: {fileID: 8151608749036815815, guid: 2c1d34a0b201e4f8ea095f4a30d79d6f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1274020240}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1274020243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1274020241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79019c9fc138647828d00740109116cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1293103699
 GameObject:
   m_ObjectHideFlags: 0
@@ -4829,7 +4806,7 @@ GameObject:
   - component: {fileID: 1377459673}
   - component: {fileID: 1377459672}
   m_Layer: 5
-  m_Name: GreyButton
+  m_Name: PinkButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4853,7 +4830,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50, y: -100}
+  m_AnchoredPosition: {x: -50, y: -150}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1377459672
@@ -4899,7 +4876,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1377459673}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2099000737}
+        m_TargetAssemblyTypeName: Challenges, Assembly-CSharp
+        m_MethodName: ChangeColour
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: food
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1377459673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6096,7 +6085,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   phoneARCamera: {fileID: 1293103701}
   m_RaycastManager: {fileID: 1768617441}
-  anchorObj_mesh: {fileID: 1274020242}
+  anchorObj_mesh: {fileID: 0}
   m_AnchorManager: {fileID: 1768617440}
 --- !u!114 &1768617440
 MonoBehaviour:
@@ -6110,7 +6099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 728ad7fae8e460a4ba41265c7308d757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AnchorPrefab: {fileID: 1274020241}
+  m_AnchorPrefab: {fileID: 0}
 --- !u!114 &1768617441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7354,7 +7343,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: PINK SKIN
+  m_Text: BLUE SKIN
 --- !u!222 &1951693493
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7580,6 +7569,7 @@ GameObject:
   - component: {fileID: 2041124025}
   - component: {fileID: 2041124027}
   - component: {fileID: 2041124026}
+  - component: {fileID: 2041124028}
   m_Layer: 5
   m_Name: Check
   m_TagString: Untagged
@@ -7644,6 +7634,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2041124024}
   m_CullTransparentMesh: 1
+--- !u!114 &2041124028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041124024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72b34fd89bc55f645bb9815dbf62e92c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 2099000730}
+  tick: {fileID: 21300000, guid: 4aba179bb2623df4c9fffa411421dadc, type: 3}
+  empty: {fileID: 21300000, guid: 2d7d34242bb238342b5090606321941d, type: 3}
+  item: vehicle
 --- !u!1 &2056433721
 GameObject:
   m_ObjectHideFlags: 0
@@ -7862,6 +7868,7 @@ GameObject:
   - component: {fileID: 2099000736}
   - component: {fileID: 2099000737}
   - component: {fileID: 2099000735}
+  - component: {fileID: 2099000738}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -7984,6 +7991,23 @@ MonoBehaviour:
   animalList: {fileID: 854708762}
   vehicleList: {fileID: 1412900097}
   foodList: {fileID: 1268114311}
+  skinColour: 
+--- !u!114 &2099000738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099000730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ac32cf45db54b2419a41efd1fafc419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSkin: {fileID: 2100000, guid: 03e967249e8093d43be34a18955359b1, type: 2}
+  blueSkin: {fileID: 2100000, guid: e09c187e007d6624a98407d17ed6eeaf, type: 2}
+  greenSkin: {fileID: 2100000, guid: 2314f1fdd4897164abdbed24c88746c6, type: 2}
+  pinkSkin: {fileID: 2100000, guid: 14e569296162a4d4c878ed3f4afca55d, type: 2}
 --- !u!1 &2099414562
 GameObject:
   m_ObjectHideFlags: 0

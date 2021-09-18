@@ -208,7 +208,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411300512997361510}
-  m_LocalRotation: {x: -0.00000032258217, y: -0.0000021911994, z: -0.00030283627, w: 0.99999994}
+  m_LocalRotation: {x: -0.00000032258217, y: -0.0000021911994, z: -0.00030283627,
+    w: 0.99999994}
   m_LocalPosition: {x: 0.000007786721, y: 0.03565171, z: -8.639205e-12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -457,7 +458,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2728225643624550775}
-  m_LocalRotation: {x: -0.00000036554957, y: -0.0011764657, z: -0.00000019313279, w: 0.99999934}
+  m_LocalRotation: {x: -0.00000036554957, y: -0.0011764657, z: -0.00000019313279,
+    w: 0.99999934}
   m_LocalPosition: {x: -1.5196358e-10, y: 0.16863236, z: -7.449954e-10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -567,6 +569,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1708931092818900670}
   - component: {fileID: 4422038393583874813}
+  - component: {fileID: 5289723919271831790}
   m_Layer: 0
   m_Name: Ch19
   m_TagString: Untagged
@@ -686,6 +689,22 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.000079900026, y: 0.15365916, z: 0.025977932}
     m_Extent: {x: 0.7434528, y: 0.8742873, z: 0.2746386}
   m_DirtyAABB: 0
+--- !u!114 &5289723919271831790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3399059228371387909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ac32cf45db54b2419a41efd1fafc419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSkin: {fileID: 2100000, guid: 03e967249e8093d43be34a18955359b1, type: 2}
+  blueSkin: {fileID: 2100000, guid: e09c187e007d6624a98407d17ed6eeaf, type: 2}
+  greenSkin: {fileID: 2100000, guid: 2314f1fdd4897164abdbed24c88746c6, type: 2}
+  pinkSkin: {fileID: 2100000, guid: 14e569296162a4d4c878ed3f4afca55d, type: 2}
 --- !u!1 &3452282445321922391
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,7 +870,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8943599789377433630}
   - component: {fileID: 8639715965054969660}
-  - component: {fileID: 3254393324394918279}
   m_Layer: 0
   m_Name: Creature
   m_TagString: Untagged
@@ -894,19 +912,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3254393324394918279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3974819563398334924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba5ed54a740df1e42b85d5ea77b943fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  arCamera: {fileID: 0}
 --- !u!1 &4040206287386642713
 GameObject:
   m_ObjectHideFlags: 0
