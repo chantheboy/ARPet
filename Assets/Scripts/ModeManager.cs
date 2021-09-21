@@ -11,9 +11,11 @@ public class ModeManager : MonoBehaviour
     public Text detectText;
     private string item;
     private string category;
+    private Vector3 location;
     private Dictionary<string, string> categories;
     private Needs needs;
     private Challenges challenges;
+    private TouchControls touchControls;
     public GameObject challengeUI;
     public GameObject detectUI;
     public GameObject customUI;
@@ -30,6 +32,7 @@ public class ModeManager : MonoBehaviour
         categories = GetComponent<Lists>().categories;
         needs = GetComponent<Needs>();
         challenges = GetComponent<Challenges>();
+        touchControls = GetComponent<TouchControls>();
 
     }
 
@@ -41,31 +44,20 @@ public class ModeManager : MonoBehaviour
             if (phoneARCamera.boxSavedOutlines.Count > 0)
             {
                 item = phoneARCamera.boxSavedOutlines[0].Label;
+                location = phoneARCamera.boxSavedOutlines[0].Rect.center;
+                phoneARCamera.enabled = false;
                 category = categories[item];
                 challenges.CheckItem(item);
-                if (category == "hunger")
+                if (category == "hunger" || category == "fun" || category == "social")
                 {
                     detectText.text = "You found a " + item + "!\nYour " + category + " increases!";
-                    needs.hunger += 0.5f;
-                    phoneARCamera.enabled = false;
-                    mode = "idle";
-                }
-                else if (category == "fun")
-                {
-                    detectText.text = "You found a " + item + "!\nYour " + category + " increases!";
-                    needs.fun += 0.5f;
-                    phoneARCamera.enabled = false;
-                    mode = "idle";
-                }
-                else if (category == "social")
-                {
-                    detectText.text = "You found a " + item + "!\nYour " + category + " increases!";
-                    needs.social += 0.5f;
-                    phoneARCamera.enabled = false;
+                    touchControls.destination = location;
+                    needs.AddNeed(category);
                     mode = "idle";
                 }
                 else
                 {
+                    phoneARCamera.enabled = true;
                     phoneARCamera.OnRefresh();
                 }
             }
@@ -76,6 +68,7 @@ public class ModeManager : MonoBehaviour
     {
         if (mode == newmode)
         {
+            detectUI.SetActive(false);
             phoneARCamera.enabled = false;
             challengeUI.SetActive(false);
             customUI.SetActive(false);
@@ -88,7 +81,10 @@ public class ModeManager : MonoBehaviour
             detectUI.SetActive(true);
             detectText.text = "Scanning...";
             phoneARCamera.enabled = true;
-            phoneARCamera.OnRefresh();
+            if (phoneARCamera.boxSavedOutlines.Count > 0)
+            {
+                phoneARCamera.OnRefresh();
+            }
             mode = newmode;
         }
         else if (newmode == "challenge")

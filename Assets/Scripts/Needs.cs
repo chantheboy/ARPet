@@ -13,9 +13,9 @@ public class Needs : MonoBehaviour
     private float savedHunger;
     private float savedFun;
     private float savedSocial;
-    private float minsHunger = 10;
-    private float minsFun = 8;
-    private float minsSocial = 5;
+    private float minsHunger = 5;
+    private float minsFun = 4;
+    private float minsSocial = 3;
     private SaveLoad saveLoad;
 
     // Start is called before the first frame update
@@ -82,6 +82,22 @@ public class Needs : MonoBehaviour
         if (social > 0)
         {
             social -= Time.deltaTime / (minsSocial * 60);
+        }
+    }
+
+    public void AddNeed(string need)
+    {
+        if (need == "hunger")
+        {
+            hunger = 1;
+        }
+        else if (need == "fun")
+        {
+            fun = 1;
+        }
+        else if (need == "social")
+        {
+            social = 1;
         }
     }
 }
