@@ -12,13 +12,14 @@ public class TouchControls : MonoBehaviour
     public ARRaycastManager arRaycastManager;
     static List<ARRaycastHit> hits = new List<ARRaycastHit>();
     public GameObject newCreature;
-    private GameObject creature;
+    public GameObject creature;
     public Vector3 destination;
+    public string anim;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -38,14 +39,13 @@ public class TouchControls : MonoBehaviour
                 }
                 else
                 {
-                    //creature.transform.position = hitPose.position;
-                    //creature.transform.LookAt(Camera.main.transform);
                     destination = hitPose.position;
                 }
             }
         }
         else if (Mathf.Abs(destination.x - creature.transform.position.x) > 0.1 || Mathf.Abs(destination.y - creature.transform.position.y) > 0.1 || Mathf.Abs(destination.z - creature.transform.position.z) > 0.1)
         {
+            anim = "walk";
             Vector3 direction = new Vector3(destination.x - creature.transform.position.x, destination.y - creature.transform.position.y, destination.z - creature.transform.position.z);
             direction = Vector3.Normalize(direction);
             creature.transform.forward = direction;
@@ -54,6 +54,7 @@ public class TouchControls : MonoBehaviour
         else
         {
             creature.transform.LookAt(Camera.main.transform);
+            anim = "idle";
         }
     }
 }

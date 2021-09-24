@@ -41,9 +41,9 @@ public class Challenges : MonoBehaviour
         }
         else
         {
-            cat = 0;
-            dog = 0;
-            horse = 0;
+            cat = 1;
+            dog = 1;
+            horse = 1;
             car = 0;
             bus = 0;
             bicycle = 0;

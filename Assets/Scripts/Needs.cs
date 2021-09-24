@@ -16,6 +16,9 @@ public class Needs : MonoBehaviour
     private float minsHunger = 5;
     private float minsFun = 4;
     private float minsSocial = 3;
+    private bool addHunger;
+    private bool addFun;
+    private bool addSocial;
     private SaveLoad saveLoad;
 
     // Start is called before the first frame update
@@ -69,17 +72,53 @@ public class Needs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hunger > 0)
+        if (addHunger)
+        {
+            if (hunger < 1)
+            {
+                hunger += Time.deltaTime / 2;
+            }
+            else
+            {
+                addHunger = false;
+            }
+            
+        }
+        else if (hunger > 0)
         {
             hunger -= Time.deltaTime / (minsHunger * 60);
         }
 
-        if (fun > 0)
+        if (addFun)
+        {
+            if (fun < 1)
+            {
+                fun += Time.deltaTime / 2;
+            }
+            else
+            {
+                addFun = false;
+            }
+
+        }
+        else if (fun > 0)
         {
             fun -= Time.deltaTime / (minsFun * 60);
         }
 
-        if (social > 0)
+        if (addSocial)
+        {
+            if (social < 1)
+            {
+                social += Time.deltaTime / 2;
+            }
+            else
+            {
+                addSocial = false;
+            }
+
+        }
+        else if (social > 0)
         {
             social -= Time.deltaTime / (minsSocial * 60);
         }
@@ -89,15 +128,15 @@ public class Needs : MonoBehaviour
     {
         if (need == "hunger")
         {
-            hunger = 1;
+            addHunger = true;
         }
         else if (need == "fun")
         {
-            fun = 1;
+            addFun = true;
         }
         else if (need == "social")
         {
-            social = 1;
+            addSocial = true;
         }
     }
 }

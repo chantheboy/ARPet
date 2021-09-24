@@ -82,7 +82,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 0
+      loopBlend: 1
       loopBlendOrientation: 1
       loopBlendPositionY: 1
       loopBlendPositionXZ: 1
@@ -536,12 +536,14 @@ ModelImporter:
     - name: mixamorig1:Spine1
       parentName: mixamorig1:Spine
       position: {x: -0, y: 0.09037475, z: -3.1624193e-11}
-      rotation: {x: -0.0000000018626449, y: 0.0000000018020535, z: 5.4040705e-10, w: 1}
+      rotation: {x: -0.0000000018626449, y: 0.0000000018020535, z: 5.4040705e-10,
+        w: 1}
       scale: {x: 0.9999999, y: 1, z: 1}
     - name: mixamorig1:Spine2
       parentName: mixamorig1:Spine1
       position: {x: -0, y: 0.10328538, z: -4.4110132e-11}
-      rotation: {x: 0.0000000037252899, y: -0.0000000014732482, z: 5.1984583e-10, w: 1}
+      rotation: {x: 0.0000000037252899, y: -0.0000000014732482, z: 5.1984583e-10,
+        w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig1:Neck
       parentName: mixamorig1:Spine2

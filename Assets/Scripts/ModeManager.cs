@@ -6,12 +6,14 @@ using UnityEngine.UI;
 public class ModeManager : MonoBehaviour
 {
     public string mode;
+    public string anim;
     public GameObject cameraImage;
     private PhoneARCamera phoneARCamera;
     public Text detectText;
     private string item;
     private string category;
-    private Vector3 location;
+    public Vector3 locationScreen;
+    public Vector3 locationGame;
     private Dictionary<string, string> categories;
     private Needs needs;
     private Challenges challenges;
@@ -44,15 +46,17 @@ public class ModeManager : MonoBehaviour
             if (phoneARCamera.boxSavedOutlines.Count > 0)
             {
                 item = phoneARCamera.boxSavedOutlines[0].Label;
-                location = phoneARCamera.boxSavedOutlines[0].Rect.center;
+                locationScreen = phoneARCamera.boxSavedOutlines[0].Rect.center;
                 phoneARCamera.enabled = false;
                 category = categories[item];
                 challenges.CheckItem(item);
                 if (category == "hunger" || category == "fun" || category == "social")
                 {
                     detectText.text = "You found a " + item + "!\nYour " + category + " increases!";
-                    touchControls.destination = location;
+                    locationGame = Camera.main.ScreenToWorldPoint(locationScreen) + Camera.main.transform.forward;
+                    touchControls.destination = locationGame;
                     needs.AddNeed(category);
+                    anim = "cheer";
                     mode = "idle";
                 }
                 else
